@@ -1,10 +1,20 @@
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Greeting from './components/greeting';
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <div>Hello, ReactOnRails</div>,
+    },
+    {
+        path: '/greeting',
+        element: <Greeting />,
+    },
+]);
 
 const App = () => {
-  return (
-    <div className="App">
-      <h1>Hello, React</h1>
-    </div>
-  );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
