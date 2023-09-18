@@ -3,18 +3,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Greeting from './components/greeting';
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <div>Hello, ReactOnRails</div>,
-    },
-    {
-        path: '/greeting',
-        element: <Greeting />,
-    },
+  {
+    path: '/',
+    element: <div>Hello, ReactOnRails</div>,
+  },
+  {
+    path: '/greeting',
+    element: <Greeting />,
+  },
 ]);
 
-const App = () => {
-    return <RouterProvider router={router} />;
-}
+const App = () => <RouterProvider router={router} />;
 
 export default App;

@@ -9,7 +9,7 @@ const initialState = {
 
 export const getGreeting = createAsyncThunk('greetings/random', async () => {
   const greeting = await axios.get('http://localhost:3000/api/v1/greetings/random');
-  return await greeting.data;
+  return greeting.data;
 });
 
 const greetingSlice = createSlice({

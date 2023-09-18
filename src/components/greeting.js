@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGreeting } from '../features/greeting/greetingSlice';
 
@@ -9,7 +8,7 @@ const Greeting = () => {
 
   useEffect(() => {
     dispatch(getGreeting());
-  }, []);
+  }, [dispatch]);
 
   if (greeting.isLoading) {
     return <p>Loading...</p>;
@@ -21,6 +20,6 @@ const Greeting = () => {
       <p>{greeting.greeting.message}</p>
     </div>
   );
-}
+};
 
 export default Greeting;
